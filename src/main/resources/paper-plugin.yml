@@ -1,0 +1,8 @@
+name: ReduceMobs
+version: '1.0'
+main: dev.hosea.reduceMobs.ReduceMobs
+api-version: '1.21'
+prefix: ReduceMobs
+authors: [sayahosea]
+description: Reduce mobs spawning using percentage
+website: https://plugins.hosea.dev

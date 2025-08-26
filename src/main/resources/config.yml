@@ -1,0 +1,17 @@
+entities:
+  IRON_GOLEM: # Entity ID
+    percentage: 50 # 50% change not spawning
+    spawn-reason: VILLAGE_DEFENSE
+  ZOMBIE:
+    percentage: 50
+
+message:
+  prefix: "&7[&6ReduceMobs&7] "
+
+  help: "&fAvailable subcommand: &bconfig&f, &bhelp&f, &breload"
+
+  missing-subcommand: "&cMissing subcommand. Type &b/reducemobs help &cinstead"
+  invalid-config: "&cInvalid config, please check config.yml file"
+
+  print-config: "&fEntity ID: &a{id} &e| &fDespawn Percentage: &a{percentage}"
+  reloaded: "&fConfig has been reloaded"
