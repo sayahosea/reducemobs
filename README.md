@@ -1,13 +1,16 @@
-# ReduceMobs
+<h1>ReduceMobs</h1>
+
+<img src="https://s3.tebi.io/plugins/reducemobs/Logo.png" align="right" width="130" height="150" alt="ReduceMobs logo">
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/sayahosea/reducemobs)
 
 Paper plugin to reduce mobs spawner using percentage.<br>
-At few cases, server owners want to keep mob spawning enabled, but also trying to prevent lags from too many mobs.<br>
-This plugin may be able helps to solve that case.<br>
-It allows server owners to control the mob spawning percentage.<br>
+No need to disable mobs, just reduce its spawn change!<br>
 
-## Requirement
 
-- PaperMC (or PaperMC fork) server (1.21 or newer)
+## Compatibility
+![paper](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/paper_vector.svg)
+![purpur](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/purpur_vector.svg)
 
 ## Dependency
 None
