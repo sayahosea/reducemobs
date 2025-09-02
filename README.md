@@ -1,6 +1,6 @@
 <h1>ReduceMobs</h1>
 
-<img src="https://s3.tebi.io/plugins/reducemobs/Logo.png" align="right" width="130" height="150" alt="ReduceMobs logo">
+<img src="https://cdn.hosea.dev/plugins/reducemobs/logo.png" align="right" width="130" height="150" alt="ReduceMobs logo">
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/sayahosea/reducemobs)
 
