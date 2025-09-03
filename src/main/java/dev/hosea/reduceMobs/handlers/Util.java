@@ -25,10 +25,6 @@ public class Util {
         plugin.getLogger().severe(message);
     }
 
-    public static void logInfo(String message) {
-        plugin.getLogger().info(message);
-    }
-
     public static FileConfiguration config() {
         return config;
     }

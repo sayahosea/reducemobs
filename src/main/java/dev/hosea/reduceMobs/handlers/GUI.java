@@ -21,7 +21,8 @@ public class GUI {
         for (String entity : entities) {
             int change = entitiesSection.getInt(entity + ".percentage");
             String spawnReason = entitiesSection.getString(entity + ".spawn-reason");
-                    inv.addItem(Util.createGuiItem(
+
+            inv.addItem(Util.createGuiItem(
                     Material.EGG, 1,
                     "&f" + entity,
                     Util.format("&7• &fDespawn Change: &b" + change + "%"),
