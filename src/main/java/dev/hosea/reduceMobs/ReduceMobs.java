@@ -17,10 +17,10 @@ public final class ReduceMobs extends JavaPlugin {
         saveDefaultConfig();
         plugin = this;
 
-        getServer().getPluginManager().registerEvents(new DetectEntitySpawn(), this);
+        getServer().getPluginManager().registerEvents(new ReduceMobsEvents(), this);
 
         this.getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS,
-                event -> event.registrar().register("reducemobs", new ReduceMobsCmd())
+                event -> event.registrar().register("reducemobs", new ReduceMobsCmds())
         );
     }
 

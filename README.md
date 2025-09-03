@@ -4,8 +4,8 @@
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/sayahosea/reducemobs)
 
-Paper plugin to reduce mobs spawner using percentage.<br>
-No need to disable mobs, just reduce its spawn change!<br>
+Paper plugin to modify mob despawn rates.<br>
+No need to disable mobs, just reduce its spawn rate!<br>
 
 
 ## Compatibility

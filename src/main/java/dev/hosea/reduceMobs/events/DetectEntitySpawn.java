@@ -1,26 +1,21 @@
-package dev.hosea.reduceMobs;
+package dev.hosea.reduceMobs.events;
 
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
-import org.bukkit.event.Listener;
-import org.bukkit.event.entity.CreatureSpawnEvent;
-import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
+import dev.hosea.reduceMobs.handlers.Util;
 import org.bukkit.configuration.MemorySection;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class DetectEntitySpawn implements Listener {
+public class DetectEntitySpawn {
 
-    private final Class<SpawnReason> enumSpawnReasonClass = SpawnReason.class;
+    private final Class<CreatureSpawnEvent.SpawnReason> enumSpawnReasonClass = CreatureSpawnEvent.SpawnReason.class;
 
-    @EventHandler(priority = EventPriority.HIGHEST)
-    public void entitySpawn(CreatureSpawnEvent e) {
-
+    public void execute(CreatureSpawnEvent e) {
         MemorySection result = (MemorySection) Util.getEntity(String.valueOf(e.getEntityType()));
         if (result == null) return;
 
-        SpawnReason realReason = e.getSpawnReason();
-        if (realReason == SpawnReason.COMMAND || realReason == SpawnReason.SPAWNER_EGG) return;
+        CreatureSpawnEvent.SpawnReason realReason = e.getSpawnReason();
+        if (realReason == CreatureSpawnEvent.SpawnReason.COMMAND || realReason == CreatureSpawnEvent.SpawnReason.SPAWNER_EGG) return;
 
         try {
             double percentage = result.getDouble("percentage");
@@ -31,7 +26,7 @@ public class DetectEntitySpawn implements Listener {
 
                 String spawnReason = result.getString("spawn-reason");
                 if (spawnReason != null) {
-                    SpawnReason enumReason = Enum.valueOf(enumSpawnReasonClass, spawnReason);
+                    CreatureSpawnEvent.SpawnReason enumReason = Enum.valueOf(enumSpawnReasonClass, spawnReason);
                     if (realReason == enumReason) e.setCancelled(true);
                 } else {
                     e.setCancelled(true);

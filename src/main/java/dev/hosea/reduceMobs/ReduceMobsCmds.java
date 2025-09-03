@@ -1,14 +1,20 @@
 package dev.hosea.reduceMobs;
 
+import dev.hosea.reduceMobs.cmds.ViewCommand;
+import dev.hosea.reduceMobs.handlers.Util;
 import io.papermc.paper.command.brigadier.BasicCommand;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
+import java.util.Collection;
+import java.util.List;
 
 @SuppressWarnings("UnstableApiUsage")
-public class ReduceMobsCmd implements BasicCommand {
+public class ReduceMobsCmds implements BasicCommand {
+
+    private final Collection<String> subCommands = List.of("help", "reload", "view");
 
     @Override
     public void execute(@NotNull CommandSourceStack commandSourceStack, @NotNull String[] args) {
@@ -25,7 +31,18 @@ public class ReduceMobsCmd implements BasicCommand {
                 ReduceMobs.getPlugin().reloadConfig();
                 sender.sendMessage(Util.message("reloaded"));
             }
+            case "view" -> ViewCommand.execute(commandSourceStack);
+            default -> sender.sendMessage(Util.message("unknown-subcommand"));
         }
+    }
+
+    @Override
+    public @NotNull Collection<String> suggest(@NotNull CommandSourceStack source, String[] args) {
+        if (args.length < 1) return subCommands;
+
+        return subCommands.stream()
+                .filter(arg -> arg.toLowerCase().startsWith(args[0].toLowerCase()))
+                .toList();
     }
 
     @Override

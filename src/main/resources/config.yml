@@ -1,17 +1,20 @@
+gui-name: Modified Despawn Rates
+
 entities:
   IRON_GOLEM: # Entity ID
-    percentage: 50 # 50% change not spawning
-    spawn-reason: VILLAGE_DEFENSE
+    percentage: 50 # Required: 50% change not spawning
+    spawn-reason: VILLAGE_DEFENSE # Optional: cancel mob spawn if this is the spawn reason
   ZOMBIE:
-    percentage: 50
+    percentage: -1 # Put -1 to disable this part
 
 message:
   prefix: "&7[&6ReduceMobs&7] "
 
-  help: "&fAvailable subcommand: &bconfig&f, &bhelp&f, &breload"
+  help: "&fAvailable subcommand: &bhelp &f| &breload &f| &bview"
 
   missing-subcommand: "&cMissing subcommand. Type &b/reducemobs help &cinstead"
+  unknown-subcommand: "&cUnknown subcommand. Type &b/reducemobs help &cinstead"
   invalid-config: "&cInvalid config, please check config.yml file"
+  player-only-cmd: "&cOnly a player can run this command"
 
-  print-config: "&fEntity ID: &a{id} &e| &fDespawn Percentage: &a{percentage}"
   reloaded: "&fConfig has been reloaded"
