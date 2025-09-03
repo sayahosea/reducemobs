@@ -49,18 +49,4 @@ public class Util {
     public static Component message(String key) {
         return format(messageStr(key));
     }
-
-    // definitely not stolen from here https://www.spigotmc.org/wiki/creating-a-gui-inventory/
-    public static ItemStack createGuiItem(
-            @NotNull final Material material, final int amount, final String name, @Nullable final Component... lore
-    ) {
-        final ItemStack item = new ItemStack(material, amount);
-        final ItemMeta meta = item.getItemMeta();
-
-        meta.displayName(Util.format(name));
-        meta.lore(Arrays.asList(lore));
-        item.setItemMeta(meta);
-
-        return item;
-    }
 }
