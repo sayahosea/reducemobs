@@ -9,8 +9,8 @@ No need to disable mobs, just reduce its spawn rate!<br>
 
 
 ## Compatibility
-![https://github.com/sayahosea/reducemobs/releases](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/paper_vector.svg)
-![https://github.com/sayahosea/reducemobs/releases](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/purpur_vector.svg)
+![paper](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/paper_vector.svg)
+![purpur](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/purpur_vector.svg)
 
 ## Dependency
 None
